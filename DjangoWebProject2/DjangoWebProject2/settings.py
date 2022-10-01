@@ -25,7 +25,7 @@ SECRET_KEY = '64417c06-2e7b-4f1e-a31a-71befcace2b8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://django-e7gnaur2pbaq6.azurewebsites.net']
+ALLOWED_HOSTS = ['https://django-e7gnaur2pbaq6.azurewebsites.net', 'localhost', '127.0.0.1', 'testserver']
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
@@ -68,6 +68,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries' :{
+                'staticfiles': 'django.templatetags.static',
+            }
         },
     },
 ]
